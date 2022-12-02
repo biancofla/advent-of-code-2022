@@ -1,6 +1,6 @@
 def load_data(filename):
     """
-        Load date from file.
+        Load data from file.
 
         Args:
             * filename (str): file's name.
