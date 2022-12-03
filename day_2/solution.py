@@ -51,7 +51,7 @@ def step_2():
         Returns:
             * (int): step 2 solution.
     """
-    games = load_data("./input_2.txt")
+    games = load_data("./input_1.txt")
 
     total_score = 0
     for g in games:

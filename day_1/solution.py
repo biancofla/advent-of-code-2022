@@ -42,7 +42,7 @@ def step_2():
         Returns:
             * (int): step 2 solution.
     """
-    data = load_data("./input_2.txt")
+    data = load_data("./input_1.txt")
     return sum(
         sorted(data)[-3:]
     )
