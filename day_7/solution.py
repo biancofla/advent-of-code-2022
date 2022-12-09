@@ -10,7 +10,7 @@ def load_data(filename):
 
         Returns:
             * (dict, list): the file system tree and
-            a containing all the absolute paths.
+            a list containing all the absolute paths.
     """
     with open(filename, "r") as f:
         data = f.read().splitlines()
@@ -73,11 +73,11 @@ def load_data(filename):
     for path, files_per_path in zip(absolute_paths, files):
         if len(files_per_path) > 0: 
             file_system = _insert_node(
-            file_system,
-            path,
-            0,
-            files_per_path,
-        )
+                file_system,
+                path,
+                0,
+                files_per_path,
+            )
         
     return file_system, absolute_paths
     

@@ -8,7 +8,7 @@ def load_data(filename):
             * filename (str): file's name.
 
         Returns:
-            * (np.ndarray): resulting grid.
+            * (np.ndarray): grid data.
     """
     grid = []
 
