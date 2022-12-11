@@ -26,8 +26,8 @@ def step_1():
 
     head_position, tail_position = [0, 0], [0, 0]
 
-    unique_tails_positions = set()
-    unique_tails_positions.add("0,0")
+    tail_unique_positions = set()
+    tail_unique_positions.add("0,0")
 
     for motion in motions:
         direction = motion[0]
@@ -58,13 +58,13 @@ def step_1():
                 tail_position[0] += deltas[0]
                 tail_position[1] += deltas[1]
 
-                unique_tails_positions.add(
+                tail_unique_positions.add(
                     f"{tail_position[0]},{tail_position[1]}"
                 )
 
             head_position = new_head_position
 
-    return len(unique_tails_positions)
+    return len(tail_unique_positions)
 
 def step_2():
     """
@@ -77,8 +77,8 @@ def step_2():
 
     positions = [[0, 0] for _ in range(10)]
 
-    unique_tails_positions = set()
-    unique_tails_positions.add("0,0")
+    tail_unique_positions = set()
+    tail_unique_positions.add("0,0")
 
     for motion in motions:
         direction = motion[0]
@@ -111,13 +111,13 @@ def step_2():
                     positions[idx + 1][0] += deltas[0]
                     positions[idx + 1][1] += deltas[1]
 
-                    unique_tails_positions.add(
+                    tail_unique_positions.add(
                         f"{positions[-1][0]},{positions[-1][1]}"
                     )
                 else:
                     break
 
-    return len(unique_tails_positions)
+    return len(tail_unique_positions)
 
 def _check_adjacency(position_1, position_2):
     """
@@ -202,3 +202,4 @@ if __name__ == "__main__":
 
     res_step_2 = step_2()
     print(res_step_2)
+

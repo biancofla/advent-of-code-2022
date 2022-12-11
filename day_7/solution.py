@@ -130,14 +130,11 @@ def step_2():
     candidated_directories_to_delete = []
     for k, v in size_per_path.items():
         if v > space_to_be_free_up:
-            candidated_directories_to_delete.append(
-                (k, v)
-            )
+            candidated_directories_to_delete.append(v)
     
     return min(
         candidated_directories_to_delete,
-        key=lambda x: x[1]
-    )[1]
+    )
 
 def _insert_node(tree, path, idx, files):
     """
@@ -177,7 +174,7 @@ def _get_directory_size(tree, path, idx, flag=False):
             * idx (int): index used to move along the path.
             * flag (bool, default=False): True, if the directory was found;
             False, otherwise (is used internally by the function during the
-            recursion).
+            recursion step).
 
         Returns:
             * (int): directory size.
