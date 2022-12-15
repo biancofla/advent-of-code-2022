@@ -33,6 +33,7 @@ def load_data(filename):
 
     return processed_data
 
+
 def step_1():
     """
         Step 1 implementation.
@@ -65,6 +66,7 @@ def step_1():
         ]
     )
 
+
 def step_2():
     """
         Step 2 implementation.
@@ -96,7 +98,7 @@ def step_2():
 
     for k, v in signal_strenght_per_cycle.items():
         current_row = int(k - 1) // 40
-        current_col = int(k - 1) %  40
+        current_col = int(k - 1) % 40
 
         sprite_col_range = list(
             range(v - 1, v + 2)
@@ -107,6 +109,7 @@ def step_2():
 
     return crt
 
+
 if __name__ == "__main__":
     res_step_1 = step_1()
     print(res_step_1)
@@ -116,4 +119,3 @@ if __name__ == "__main__":
         for col in range(len(res_step_2[0])):
             print(res_step_2[row][col], end="")
         print()
-
